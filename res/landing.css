@@ -7,7 +7,7 @@ body {
   color: #ffffff;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
   font-weight: 300;
-  background-image: url(https://picsum.photos/seed/picsum/1800/900);
+  background-image: url(https://i.picsum.photos/id/238/2560/1440.jpg?hmac=wKo4dLHwDntZmO_fdtnKtsnmRcPMACca3m5J5vx2AVc);
 }
 
 .container {
@@ -31,9 +31,9 @@ body {
 }
 
 .hero svg {
-  margin-top: 8vh;
+  margin-top: 10vh;
   justify-self: center;
-  width: 28vw;
+  width: 17vw;
 }
 
 .hero h2 {
