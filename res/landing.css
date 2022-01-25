@@ -6,8 +6,12 @@
 body {
   color: #ffffff;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
-  font-weight: 300;
-  background-image: url(https://i.picsum.photos/id/238/2560/1440.jpg?hmac=wKo4dLHwDntZmO_fdtnKtsnmRcPMACca3m5J5vx2AVc);
+  font-weight: 300;ckground: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*background-image: url(https://i.picsum.photos/id/238/2560/1440.jpg?hmac=wKo4dLHwDntZmO_fdtnKtsnmRcPMACca3m5J5vx2AVc);*/
+ /* background-size: cover;*/
 }
 
 .container {
@@ -28,12 +32,16 @@ body {
   margin: auto;
 
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .hero svg {
   margin-top: 10vh;
   justify-self: center;
-  width: 22vw;
+  min-width: 100px;
+  max-width: 300px;
 }
 
 .hero h2 {
