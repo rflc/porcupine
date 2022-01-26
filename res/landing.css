@@ -66,30 +66,30 @@ header {
   " l r ";
 }
 
-.login {
+#login {
   grid-area: r;
   cursor: pointer;
 }
 
-.login a {
+#login a {
   vertical-align: top;
   line-height: 2em;
 }
 
-.login svg {
+#login svg {
   grid-area: b;
   height: 2.1em;
 }
 
-.login:hover #frame {
+#login:hover #frame {
   stroke: grey;
 }
 
-.join {
+#join {
   grid-area: l;
 }
 
-.join button {
+#join button {
   height: 2.1em;
   width: 6em;
   font-size: 1em;
@@ -101,7 +101,6 @@ form * {
   width: 15em;
   border: solid white;
   outline: none;
-  display: none;
 }
 
 input {
