@@ -84,6 +84,12 @@ header {
   grid-area: l;
 }
 
+.join button {
+  height: 2.1em;
+  width: 6em;
+  font-size: 1em;
+}
+
 form * {
   height: 2em;
   width: 15em;
