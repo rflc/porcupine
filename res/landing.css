@@ -42,10 +42,10 @@ header {
 }
 
 .hero svg {
-  margin-top: 10vh;
+  margin-top: 5vh;
   justify-self: center;
   min-width: 100px;
-  max-width: 300px;
+  max-width: 12rem;
 }
 
 .hero h2 {
@@ -68,6 +68,7 @@ header {
 
 .login {
   grid-area: r;
+  cursor: pointer;
 }
 
 .login a {
@@ -80,6 +81,10 @@ header {
   height: 2.1em;
 }
 
+.login:hover #frame {
+  stroke: grey;
+}
+
 .join {
   grid-area: l;
 }
@@ -88,6 +93,7 @@ header {
   height: 2.1em;
   width: 6em;
   font-size: 1em;
+  cursor: pointer;
 }
 
 form * {
