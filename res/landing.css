@@ -13,14 +13,20 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
-    grid-template-rows: 1fr 60vh 1fr 1fr;
-    grid-template-areas:
-    " ... ... ... "
-    " ... lgo ... "
-    " ... lgn ... "
-    " ... ftr ... ";
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
+  grid-template-rows: 1fr 60vh 1fr 1fr;
+  grid-template-areas:
+  " ... ... ... "
+  " ... lgo ... "
+  " ... lgn ... "
+  " ... ftr ... ";
+}
+
+header {
+  grid-area: hdr;
 }
 
 .hero {
@@ -47,14 +53,35 @@ body {
   justify-self: center;
 }
 
-.login {
+.access {
   grid-area: lgn;
   align-self: start;
   justify-self: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto;
+  grid-gap: 1.2em;
+  grid-template-areas:
+  " l r ";
 }
 
-header {
-  grid-area: hdr;
+.login {
+  grid-area: r;
+}
+
+.login a {
+  vertical-align: top;
+  line-height: 2em;
+}
+
+.login svg {
+  grid-area: b;
+  height: 2.1em;
+}
+
+.join {
+  grid-area: l;
 }
 
 form * {
@@ -66,7 +93,7 @@ form * {
 }
 
 input {
-
+  display: none;
 }
 
 button {
@@ -74,4 +101,15 @@ button {
   background: transparent;
   height: 2.5em;
   width: 8em;
+}
+
+footer {
+  grid-area: ftr;
+  height: 100%;
+  width: 100%;
+  align-self: end;
+  justify-self: end;
+
+  display: grid;
+  place-items: center end;
 }
