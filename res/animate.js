@@ -2,11 +2,26 @@
 var timer = null;
 var callToAction;
 
-var login = function() {
+var emailinput = function() {
   var tl = new TimelineMax();
   tl.set('.access', {display: 'none'})
     .set('#inputs',{visibility: 'visible'})
     .set('#email',{visibility: 'visible'});
+}
+
+
+var passwdinput = function() {
+  var tl = new TimelineMax();
+  tl.set('#email', {visibility: 'hidden'})
+    .set('#password', {visibility: 'visible'});
+}
+
+var emailcheck = function(e) {
+  var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(e.target.value.match(regex)){
+    setTimeout(() => { passwdinput(); }, 700);
+    /*alert(e.target.value);*/
+  }
 }
 
 /*
@@ -30,11 +45,9 @@ var animate = function(){//{{{
 }//}}}
 */
 var init = function() {
-  document.getElementById("login").addEventListener("click", login)
+  document.getElementById("login").addEventListener("click", emailinput);
+  document.getElementById("email").addEventListener("input", emailcheck);
 }
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', init);
-if (document.documentElement.clientWidth > 640) {
-    document.addEventListener('scroll', play);
-}
