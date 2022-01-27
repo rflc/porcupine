@@ -21,7 +21,7 @@ body {
   grid-template-areas:
   " ... ... ... "
   " ... lgo ... "
-  " ... lgn ... "
+  " ... acs ... "
   " ... ftr ... ";
 }
 
@@ -54,7 +54,7 @@ header {
 }
 
 .access {
-  grid-area: lgn;
+  grid-area: acs;
   align-self: start;
   justify-self: center;
 
@@ -96,6 +96,24 @@ header {
   cursor: pointer;
 }
 
+form {
+  grid-area: acs;
+  height: min-content;
+  width: min-content;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 0;
+  justify-self: top;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  " in ";
+  
+  visibility: hidden;
+}
+
 form * {
   height: 2em;
   width: 15em;
@@ -103,10 +121,16 @@ form * {
   outline: none;
 }
 
-input {
-  display: none;
+form input {
+  grid-area: in;
+  justify-self: center;
 }
 
+#email, #password {
+  visibility: hidden;
+}
+
+/* deleted element, remove style?*/
 button {
   color: white;
   background: transparent;

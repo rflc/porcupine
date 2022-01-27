@@ -5,7 +5,8 @@ var callToAction;
 var login = function() {
   var tl = new TimelineMax();
   tl.set('.access', {display: 'none'})
-    .set('#email',{display: 'inline'});
+    .set('#inputs',{visibility: 'visible'})
+    .set('#email',{visibility: 'visible'});
 }
 
 /*
