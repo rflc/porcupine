@@ -82,7 +82,7 @@ header {
 }
 
 #login:hover #frame {
-  stroke: grey;
+  stroke: #979797;
 }
 
 #join {
@@ -100,7 +100,7 @@ form {
   grid-area: acs;
   height: min-content;
   width: min-content;
-  overflow: hidden;
+  /* overflow: hidden;*/
   margin: auto;
   margin-top: 0;
   justify-self: top;
@@ -109,25 +109,52 @@ form {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  " in ";
+  " box ";
   
   visibility: hidden;
 }
 
-form * {
+/* divs */
+form div {
+  grid-area: box;
+  position: absolute;
   height: 2em;
   width: 15em;
+  justify-self: center;
+  border: solid red;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  " input ";
+}
+
+/*
+.first {
+  z-index: 1;
+}
+
+.second {
+  z-index: 2;
+}
+*/
+
+form input {
+  grid-area: input;
+  height: 100%;
+  width: 100%;
+  justify-self: center;
   border: solid white;
   outline: none;
 }
 
-form input {
-  grid-area: in;
-  justify-self: center;
+#email, .passwd {
+  visibility: hidden;
 }
 
-#email, #password {
-  visibility: hidden;
+.passwd {
+  border: solid red;
 }
 
 /* deleted element, remove style?*/

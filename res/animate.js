@@ -5,15 +5,16 @@ var callToAction;
 var emailinput = function() {
   var tl = new TimelineMax();
   tl.set('.access', {display: 'none'})
-    .set('#inputs',{visibility: 'visible'})
-    .set('#email',{visibility: 'visible'});
+    .set('.second',{visibility: 'hidden'})
+    .set('.first',{visibility: 'visible'});
 }
 
 
 var passwdinput = function() {
   var tl = new TimelineMax();
-  tl.set('#email', {visibility: 'hidden'})
-    .set('#password', {visibility: 'visible'});
+  tl.set('.first', {visibility: 'hidden'})
+    .set('.second', {visibility: 'visible'});
+    /*.set('#password', {visibility: 'visible'});*/
 }
 
 var emailcheck = function(e) {
