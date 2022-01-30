@@ -4,75 +4,82 @@
 }
 
 body {
-  color: #C4B1DD;
+  color: #ffffff;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
+  background: #F3904F;
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);
+  background: linear-gradient(to right, #3B4371, #F3904F);
+ /* background-size: cover;*/
 }
 
 .container {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-    " ... hdr ... "
-    " ... bdy ... "
-    " ... ftr ... ";
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
+  grid-template-rows: 10vh 1fr 1fr 1fr;
+  grid-template-areas:
+  " ... header ... "
+  " ... vision ... "
+  " ...  tech  ... "
+  " ...  team  ... ";
 }
 
 header {
-  grid-area: hdr;
-  border: dotted black;
+  grid-area: header;
 
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: auto;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
   grid-template-areas:
-  " lgo lgn ";
+  " logo name ";
 }
 
-.logo {
-    grid-area: lgo;
-    margin: left;
-    width: 20vw;
-    border: solid pink;
-
-    display: grid;
+header svg {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+  width: 3em;
 }
 
-.logo svg {
-  width: 100%;
-  height: 1.5em;
+header h2 {
+  grid-area: name;
   justify-self: start;
-  align-self: start;
-  border: dotted tomato;
+  align-self: center;
+  font-size: 1.4em;
+  font-weight: 200;
 }
 
-.login {
-  grid-area: lgn;
-  justify-self: end;
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+  " title "
+  " desc  ";
+}
+
+section h2 {
+  grid-area: title;
+  margin: auto;
+}
+
+section p {
+  grid-area: desc;
+}
+
+section:nth-of-type(1) {
+  grid-area: vision;
 }
 
 
-/*
-.condor_clip {
-    clip-path: url("#condor");
-    -webkit-clip-path: url("#condor");
+section:nth-of-type(2) {
+  grid-area: tech;
 }
 
-.hero svg {
-    margin: auto;
-    width: 96vw;
-}
 
-.footer {
-    grid-area: ftr;
-    margin: auto;
-}
-*/
-
-.crop {
-        width: 400px; /* width of container */
-	    height: 120px; /* height of container */
-	        object-fit: cover;
-		    object-position: 0% 50%; /* try 20px 10px */
+section:nth-of-type(3) {
+  grid-area: team;
 }
