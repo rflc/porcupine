@@ -137,6 +137,13 @@ form div {
 .second {
   /*z-index: 2;*/
   visibility: hidden;
+  
+  display: grid;
+  grid-template-columns: 1f min-content;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  grid-template-areas:
+  " field button ";
 }
 
 .second svg {
@@ -151,6 +158,17 @@ form input {
   border: solid white;
   outline: none;
 }
+
+.second input {
+  grid-area: field;
+}
+
+.second svg {
+  grid-area: button;
+  align-self: center;
+  cursor: pointer;
+}
+
 /*
 #email, .passwd {
   visibility: hidden;
