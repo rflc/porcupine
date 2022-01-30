@@ -27,6 +27,10 @@ var emailcheck = function(e) {
   }
 }
 
+var next = function() {
+  window.location.href = "main.html";
+}
+
 /*
 var animate = function(){//{{{
     // Logo Animation
@@ -50,6 +54,7 @@ var animate = function(){//{{{
 var init = function() {
   document.getElementById("login").addEventListener("click", emailinput);
   document.getElementById("email").addEventListener("input", emailcheck);
+  document.getElementById("enter").addEventListener("click", next);
 }
 
 // Event Listeners

@@ -146,10 +146,6 @@ form div {
   " field button ";
 }
 
-.second svg {
-  height: 2em;
-}
-
 form input {
   grid-area: input;
   height: 100%;
@@ -159,13 +155,20 @@ form input {
   outline: none;
 }
 
+/* consolidate into single .second style */
+.second {
+  height: 2em;
+}
+
 .second input {
   grid-area: field;
+  width: 15em; 
 }
 
 .second svg {
   grid-area: button;
-  align-self: center;
+  justify-self: center;
+  height: 100%;
   cursor: pointer;
 }
 

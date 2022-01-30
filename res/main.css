@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #C4B1DD;
+  font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
+  font-weight: 300;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    " ... hdr ... "
+    " ... bdy ... "
+    " ... ftr ... ";
+}
+
+header {
+  grid-area: hdr;
+  border: dotted black;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto;
+  grid-template-areas:
+  " lgo lgn ";
+}
+
+.logo {
+    grid-area: lgo;
+    margin: left;
+    width: 20vw;
+    border: solid pink;
+
+    display: grid;
+}
+
+.logo svg {
+  width: 100%;
+  height: 1.5em;
+  justify-self: start;
+  align-self: start;
+  border: dotted tomato;
+}
+
+.login {
+  grid-area: lgn;
+  justify-self: end;
+}
+
+
+/*
+.condor_clip {
+    clip-path: url("#condor");
+    -webkit-clip-path: url("#condor");
+}
+
+.hero svg {
+    margin: auto;
+    width: 96vw;
+}
+
+.footer {
+    grid-area: ftr;
+    margin: auto;
+}
+*/
+
+.crop {
+        width: 400px; /* width of container */
+	    height: 120px; /* height of container */
+	        object-fit: cover;
+		    object-position: 0% 50%; /* try 20px 10px */
+}
