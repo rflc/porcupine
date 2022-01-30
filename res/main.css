@@ -85,13 +85,63 @@ section:nth-of-type(2) {
 
 section:nth-of-type(3) {
   grid-area: team;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  " a "
+  " b "
+  " c ";
 }
 
 section:nth-of-type(4) {
   grid-area: cntct;
+
+}
+
+.person:nth-of-type(1) {
+  grid-area: a;
+}
+
+
+.person:nth-of-type(2) {
+  grid-area: b;
+}
+
+.person:nth-of-type(3) {
+  grid-area: c;
+}
+
+.person {
+  display: grid;
+  grid-template-columns:;
+  grid-template-rows:;
+  grid-template-areas:
+  "  img  "
+  "  name "
+  " title "
+  " desc  ";
+}
+
+.person img {
+  grid-area: img;
+}
+
+.person h3 {
+  grid-area: name;
+}
+
+.person h4 {
+  grid-area: title;
+}
+
+.person p {
+  grid-area: desc;
 }
 
 footer {
   grid-area: footer;
   justify-self: end;
 }
+
