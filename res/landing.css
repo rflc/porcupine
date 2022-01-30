@@ -117,7 +117,7 @@ form {
 /* divs */
 form div {
   grid-area: box;
-/*  position: absolute;*/
+/*  position: absolute; */
   height: 2em;
   width: 15em;
   justify-self: center;
