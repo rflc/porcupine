@@ -5,8 +5,10 @@ var callToAction;
 var emailinput = function() {
   var tl = new TimelineMax();
   tl.set('.access', {display: 'none'})
-    .set('.second',{visibility: 'hidden'})
-    .set('.first',{visibility: 'visible'});
+    .set('#inputs',{visibility: 'visible'});
+  /*
+    .set('#login .first #email',{visibility: 'visible'});
+    */
 }
 
 
