@@ -23,7 +23,9 @@ body {
   " ... header ... "
   " ... vision ... "
   " ...  tech  ... "
-  " ...  team  ... ";
+  " ...  team  ... "
+  " ...  cntct ... "
+  " ... footer ... ";
 }
 
 header {
@@ -83,4 +85,13 @@ section:nth-of-type(2) {
 
 section:nth-of-type(3) {
   grid-area: team;
+}
+
+section:nth-of-type(4) {
+  grid-area: cntct;
+}
+
+footer {
+  grid-area: footer;
+  justify-self: end;
 }
