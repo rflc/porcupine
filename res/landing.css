@@ -116,8 +116,8 @@ form {
 
 /* divs */
 form div {
-  grid-area: box;
   height: 2em;
+  width: 100%;
   /*width: 15em;*/
   justify-self: center;
 
@@ -130,11 +130,13 @@ form div {
 
 
 .first {
+  grid-area: box;
   /*z-index: 1;*/
 }
 
 .second {
   /*z-index: 2;*/
+  grid-area: box;
   visibility: hidden;
   
   display: grid;
@@ -189,9 +191,7 @@ footer {
   grid-area: ftr;
   height: 100%;
   width: 100%;
-  align-self: end;
-  justify-self: end;
 
   display: grid;
-  place-items: center end;
+  place-items: center center;
 }
