@@ -106,7 +106,7 @@ form {
   justify-self: top;
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 15em;
   grid-template-rows: 1fr;
   grid-template-areas:
   " box ";
@@ -117,9 +117,8 @@ form {
 /* divs */
 form div {
   grid-area: box;
-/*  position: absolute; */
   height: 2em;
-  width: 15em;
+  /*width: 15em;*/
   justify-self: center;
 
   display: grid;
