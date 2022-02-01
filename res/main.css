@@ -118,11 +118,17 @@ section:nth-of-type(3) {
   grid-area: area;
   border: solid white;
   border-radius: 8px;
+  max-width: 20em;
+  min-width: 50vw;
+  height: 25vh;
+  margin: auto;
 }
 
 .contact button {
   grid-area: bttm;
-  width: 6em;
+  width: 7em;
+  height: 2.5em;
+  color: white;
   border: solid white;
   background: none;
 }
