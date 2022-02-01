@@ -105,8 +105,13 @@ section:nth-of-type(3) {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
   grid-template-areas:
-  " area "
-  " bttm ";
+  " title "
+  " area  "
+  " bttm  ";
+}
+
+.contact h2 {
+  grid-area: title;
 }
 
 .contact textarea {
@@ -115,7 +120,12 @@ section:nth-of-type(3) {
   border-radius: 8px;
 }
 
-
+.contact button {
+  grid-area: bttm;
+  width: 6em;
+  border: solid white;
+  background: none;
+}
 
 /* modify */
 section:nth-of-type(3) h2 {
