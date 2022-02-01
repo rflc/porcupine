@@ -49,8 +49,10 @@ header {
 }
 
 .hero h2 {
+  justify-self: center;
   align-self: start;
   justify-self: center;
+  font-size: 1.4em;
 }
 
 .access {

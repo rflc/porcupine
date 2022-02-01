@@ -18,14 +18,14 @@ body {
 
   display: grid;
   grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
-  grid-template-rows: 10vh 1fr 1fr 1fr;
+  grid-template-rows: 10vh 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
   " ... header ... "
   " ... vision ... "
   " ...  tech  ... "
   " ...  team  ... "
   " ...  cntct ... "
-  " ... footer ... ";
+  " ...   ftr  ... ";
 }
 
 header {
@@ -44,6 +44,7 @@ header svg {
   justify-self: center;
   align-self: center;
   width: 3em;
+  padding-left: .2em;
 }
 
 header h2 {
@@ -58,6 +59,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
+  grid-gap: 10vh;
   grid-template-areas:
   " title "
   " desc  ";
@@ -147,7 +149,7 @@ section:nth-of-type(3) h2 {
 }
 
 footer {
-  grid-area: footer;
+  grid-area: ftr;
   justify-self: end;
 }
 
