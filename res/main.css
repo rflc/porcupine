@@ -98,18 +98,24 @@ section:nth-of-type(3) {
   " d ";
 }
 
-section:nth-of-type(4) {
+.contact {
   grid-area: cntct;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  grid-template-areas:
+  " area "
+  " bttm ";
 }
 
-fieldset {
-  border: 0;
-}
-
-textarea {
+.contact textarea {
+  grid-area: area;
   border: solid white;
   border-radius: 8px;
 }
+
+
 
 /* modify */
 section:nth-of-type(3) h2 {
