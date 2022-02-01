@@ -100,9 +100,18 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
   grid-area: cntct;
-
 }
 
+fieldset {
+  border: 0;
+}
+
+textarea {
+  border: solid white;
+  border-radius: 8px;
+}
+
+/* modify */
 section:nth-of-type(3) h2 {
   grid-area: a;
   margin: auto;
@@ -150,6 +159,6 @@ section:nth-of-type(3) h2 {
 
 footer {
   grid-area: ftr;
-  justify-self: end;
+  justify-self: center;
 }
 
