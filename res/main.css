@@ -58,11 +58,16 @@ header h2 {
 section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content min-content 1fr;
   grid-gap: 10vh;
   grid-template-areas:
+  " hero  "
   " title "
   " desc  ";
+}
+
+section svg {
+  grid-area: hero;
 }
 
 section h2 {
