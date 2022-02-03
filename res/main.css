@@ -7,10 +7,10 @@ body {
   color: #ffffff;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
   font-weight: 300; 
-  background: #F3904F;
-  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);
-  background: linear-gradient(to right, #3B4371, #F3904F);
- /* background-size: cover;*/
+background: #bdc3c7;
+  background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-size: cover;*/
 }
 
 .container {

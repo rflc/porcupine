@@ -6,10 +6,10 @@
 body {
   color: #ffffff;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
-  font-weight: 300;ckground: #F3904F;
-  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);
-  background: linear-gradient(to right, #3B4371, #F3904F);
- /* background-size: cover;*/
+  font-weight: 300;
+  background: #bdc3c7;
+  background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
 }
 
 .container {
