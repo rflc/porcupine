@@ -16,12 +16,10 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0, 1200px) minmax(0, 1fr);
-  grid-template-rows: 1fr 60vh 1fr 1fr;
+  grid-template-columns: minmax(0,1fr) minmax(0, 350px) minmax(0, 1fr);
+  grid-template-rows: 1fr min-content;
   grid-template-areas:
-  " ... ... ... "
-  " ... lgo ... "
-  " ... acs ... "
+  " ... frm ... "
   " ... ftr ... ";
 }
 
@@ -30,38 +28,45 @@ header {
 }
 
 .frame {
-  grid-area: lgo;
+  grid-area: frm;
   height: 90vh;
-  min-width: 26em;
-  max-width: 90 vw;
+  width: 100%;
   margin: auto;
   background-color: white;
   border-radius: 16px;
+  /*box-shadow: 5px 10px #888888;*/
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 4 em;
+  grid-template-areas:
+  " hero   "
+  " text   "
+  " access ";
+
+  place-items: center;
 }
 
 .hero {
-  margin-top: 5vh;
-  justify-self: center;
-  min-width: 100px;
-  max-width: 12rem;
+  grid-area: hero;
+  width: 60%;
 }
 
 .hero_text {
+  grid-area: text;
   width: 70%;
+  height: 30vh;
   justify-self: center;
   align-self: start;
   justify-self: center;
 }
 
 .access {
-  grid-area: acs;
+  grid-area: access;
   align-self: start;
   justify-self: center;
+  border: dotted tomato;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
