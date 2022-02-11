@@ -32,9 +32,10 @@ header {
 .frame {
   grid-area: lgo;
   height: 100%;
-  min-width: 20em;
+  min-width: 32em;
   max-width: 90 vw;
   margin: auto;
+  background-color: white;
 
   display: grid;
   grid-template-columns: 1fr;
