@@ -29,10 +29,11 @@ header {
   grid-area: hdr;
 }
 
-.hero {
+.frame {
   grid-area: lgo;
   height: 100%;
-  width: 100%;
+  min-width: 20em;
+  max-width: 90 vw;
   margin: auto;
 
   display: grid;
@@ -41,14 +42,14 @@ header {
   justify-items: center;
 }
 
-.hero svg {
+.hero {
   margin-top: 5vh;
   justify-self: center;
   min-width: 100px;
   max-width: 12rem;
 }
 
-.hero h2 {
+.hero_text {
   justify-self: center;
   align-self: start;
   justify-self: center;
