@@ -52,10 +52,10 @@ header {
 }
 
 .hero_text {
+  width: 70%;
   justify-self: center;
   align-self: start;
   justify-self: center;
-  font-size: 1.4em;
 }
 
 .access {
