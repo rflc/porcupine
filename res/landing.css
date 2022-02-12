@@ -67,135 +67,17 @@ header {
   grid-area: access;
   align-self: start;
   justify-self: center;
-  border: dotted tomato;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: auto;
-  grid-gap: 1.2em;
-  grid-template-areas:
-  " l r ";
 }
 
-#login {
-  grid-area: r;
-  cursor: pointer;
-}
-
-#login a {
-  vertical-align: top;
-  line-height: 2em;
-}
-
-#login svg {
-  grid-area: b;
-  height: 2.1em;
-}
-
-#login:hover #frame {
-  stroke: #979797;
-}
-
-#join {
-  grid-area: l;
-}
-
-#join button {
-  height: 2.1em;
-  width: 6em;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-form {
-  grid-area: acs;
-  height: min-content;
-  width: min-content;
-  /* overflow: hidden;*/
-  margin: auto;
-  margin-top: 0;
-  justify-self: top;
-
-  display: grid;
-  grid-template-columns: 15em;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  " box ";
-  
-  visibility: hidden;
-}
-
-/* divs */
-form div {
-  height: 2em;
-  width: 100%;
-  /*width: 15em;*/
-  justify-self: center;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-  " input ";
-}
-
-
-.first {
-  grid-area: box;
-  /*z-index: 1;*/
-}
-
-.second {
-  /*z-index: 2;*/
-  grid-area: box;
-  visibility: hidden;
-  
-  display: grid;
-  grid-template-columns: 1f min-content;
-  grid-template-rows: 1fr;
-  /*grid-gap: 1em;*/
-  grid-template-areas:
-  " field button ";
-}
-
-form input {
-  grid-area: input;
-  height: 100%;
-  width: 100%;
-  justify-self: center;
-  border: solid white;
-  outline: none;
-}
-
-/* consolidate into single .second style */
-.second {
-  height: 2em;
-}
-
-.second input {
-  grid-area: field;
-  width: 15em; 
-}
-
-.second svg {
-  grid-area: button;
-  justify-self: center;
-  height: 100%;
-  cursor: pointer;
-}
-
-/*
-#email, .passwd {
-  visibility: hidden;
-}
-*/
-
-/* deleted element, remove style?*/
 button {
-  color: white;
+  margin: auto;
+  color: black;
   background: transparent;
   height: 2.5em;
   width: 8em;
+  cursor: pointer;
 }
 
 footer {
@@ -204,5 +86,5 @@ footer {
   width: 100%;
 
   display: grid;
-  place-items: start center;
+  place-items: center center;
 }
