@@ -1,30 +1,56 @@
 // Global variables
 var timer = null;
 var callToAction;
+var access;
+
+/*
+<input type="email" class="border_gradient" autofocus placeholder="Email">
+<input type="" class="border_gradient" autofocus placeholder="Enter code">
+*/
 
 var emailinput = function() {
+  const input = document.createElement('input');
+  input.type = 'email';
+  input.id = 'email';
+  input.className = 'border_gradient email';
+  input.placeholder = 'Email';
+  access.replaceChildren(input);
+  document.getElementById("email").addEventListener("input", emailcheck);
+  /*
   var tl = new TimelineMax();
   tl.set('.access', {display: 'none'})
     .set('#inputs',{visibility: 'visible'});
-  /*
-    .set('#login .first #email',{visibility: 'visible'});
-    */
+  */
 }
 
 
 var passwdinput = function() {
-  var tl = new TimelineMax();
-  tl.set('.first', {visibility: 'hidden'})
-    .set('.second', {visibility: 'visible'});
-    /*.set('#password', {visibility: 'visible'});*/
+  const message = document.createElement('h4');
+  message.innerText = 'Request Submitted';
+  message.color = "black";
+  access.replaceChildren(message);
 }
 
 var emailcheck = function(e) {
   var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if(e.target.value.match(regex)){
-    setTimeout(() => { passwdinput(); }, 700);
-    /*alert(e.target.value);*/
+    setTimeout(() => { passwdinput(); }, 900);
   }
+}
+
+var codeinput = function() {
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.id = 'code';
+  input.className = 'border_gradient indent';
+  input.placeholder = 'Enter code';
+  access.replaceChildren(input);
+  document.getElementById("code").addEventListener("input", codecheck);
+  /*
+  var tl = new TimelineMax();
+  tl.set('.access', {display: 'none'})
+    .set('#inputs',{visibility: 'visible'});
+  */
 }
 
 var next = function() {
@@ -52,9 +78,9 @@ var animate = function(){//{{{
 }//}}}
 */
 var init = function() {
-  document.getElementById("login").addEventListener("click", emailinput);
-  document.getElementById("email").addEventListener("input", emailcheck);
-  document.getElementById("enter").addEventListener("click", next);
+  access = document.getElementById("access");
+  document.getElementById("button").addEventListener("click", emailinput);
+  document.getElementById("code").addEventListener("click", codeinput);
 }
 
 // Event Listeners

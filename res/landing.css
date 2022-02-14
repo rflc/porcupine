@@ -4,7 +4,7 @@
 }
 
 body {
-  color: #ffffff;
+  color: #000000;
   font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
   font-weight: 300;
   background: #bdc3c7;
@@ -71,13 +71,45 @@ header {
   display: grid;
 }
 
+.access a {
+  padding-top: 1em;
+  font-size: .8em;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*
 .access img {
   margin: auto;
   color: black;
   background: transparent;
   height: 2.5em;
   width: 8em;
+}
+*/
+
+input {
+  height: 2.5em;
+  width: 12em;
+  outline: none;
   cursor: pointer;
+}
+
+.border_gradient {
+  border: double 2px transparent;
+  border-radius: 12px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, rgba(118,99, 175, 1), rgba(246, 117, 73, 1), rgba(223, 55, 90, 1));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.email {
+  width: 16em;
+  cursor: text;
+}
+
+.indent {
+  text-indent: 10px;
 }
 
 footer {
