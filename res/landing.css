@@ -89,6 +89,7 @@ header {
 */
 
 input {
+  color: black;
   height: 2.5em;
   width: 12em;
   outline: none;
@@ -106,7 +107,6 @@ input {
 .email {
   width: 16em;
   cursor: text;
-
 }
 
 .indent {

@@ -12,7 +12,7 @@ var emailinput = function() {
   const input = document.createElement('input');
   input.type = 'email';
   input.id = 'email';
-  input.className = 'border_gradient email';
+  input.className = 'border_gradient email indent';
   input.placeholder = 'Email';
   access.replaceChildren(input);
   document.getElementById("email").addEventListener("input", emailcheck);
